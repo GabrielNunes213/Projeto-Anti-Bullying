@@ -97,6 +97,10 @@ p {
     max-width: 516px;
 }
 
+.frase-efeito {
+    
+}
+
 @media (max-width: 999px) {
     body {
       overflow-x: hidden;

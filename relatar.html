@@ -28,16 +28,17 @@
 
   <main>
     
+    <img src="img/Bullying-05.png" alt="" id="imagem-bullying-03">
 
 <div id="formulario">
 <form class="row g-3">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label"><b>Nome</b></label>
-    <input type="text" class="form-control" id="inputEmail4" placeholder="Opicional">
+    <input type="text" class="form-control" id="inputEmail4" placeholder="Digite seu Nome">
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label"><b>Sobrenome</b></label>
-    <input type="text" class="form-control" id="inputPassword4" placeholder="Opicional">
+    <input type="text" class="form-control" id="inputPassword4" placeholder="Digite seu Sobrenome">
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label"><b>Escola</b></label>
@@ -49,7 +50,7 @@
     <input type="text" class="form-control" id="inputCity" placeholder="Digite sua Cidade">
 </div>
 
-<div class="col-md-5">
+<div class="col-md-6">
     <label for="inputState" class="form-label"><b>Estado</b></label>
     <select id="inputState" class="form-select">
     <option selected>Selecione um estado</option>
@@ -83,11 +84,31 @@
     </select>
 </div>
 
+<div class="col-md-6">
+  <label for="inputCity" class="form-label"><b>Nome Agressor</b></label>
+  <input type="text" class="form-control" id="inputCity" placeholder="Digite o nome do agressor">
+</div>
+
+<div class="col-md-6">
+  <label for="inputCity" class="form-label"><b>E-mail</b></label>
+  <input type="email" class="form-control" id="inputCity" placeholder="Digite o Email">
+</div>
+
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label"><b>Relato</b></label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descreva melhor o acontecido"></textarea>
 </div>
-  <button type="submit" class="btn btn-primary" id="botao-submit-relatar">Enviar</button>
+
+<div class="col-md-8">
+  <label for="inputState" class="form-label"><b>Deseja Marcar um atendimento presencial?</b></label>
+  <select id="inputState" class="form-select">
+  <option selected>Selecione uma opção</option>
+  <option value="Sim">Sim</option>
+  <option value="Não">Não</option>
+</select>
+</div>
+
+  <button type="submit" class="btn btn-primary" id="botao-submit-relatar" style="margin-bottom: 30px;">Enviar</button>
 </form>
 </div>
 
