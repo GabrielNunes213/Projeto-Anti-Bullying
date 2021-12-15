@@ -21,7 +21,7 @@
         <ul class="nav-list">
           <li><a href="index.html">Início</a></li>
           <li><a href="relatar.html">Relatar</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="contato.html">Cadastro Instituição</a></li>
         </ul>
       </nav>
     </header>
@@ -31,80 +31,65 @@
     <img src="img/Bullying-05.png" alt="" id="imagem-bullying-03">
 
 <div id="formulario">
-<form class="row g-3">
+<form method="post" action="EnviarEmail.php" class="row g-3">
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label"><b>Nome</b></label>
-    <input type="text" class="form-control" id="inputEmail4" placeholder="Digite seu Nome">
+    <label for="inputNome" class="form-label"><b>Nome <b style="color:red;">*</b></b></label>
+    <input type="text" class="form-control" id="inputNome" name="nome" placeholder="Digite seu Nome" required>
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label"><b>Sobrenome</b></label>
-    <input type="text" class="form-control" id="inputPassword4" placeholder="Digite seu Sobrenome">
+    <label for="inputSobrenome" class="form-label"><b>Sobrenome <b style="color:red;">*</b></b></label>
+    <input type="text" class="form-control" id="inputSobrenome" name="sobrenome" placeholder="Digite seu Sobrenome" required>
   </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label"><b>Escola</b></label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Digite sua escola">
-  </div>
+
+  <div class="col-md-6">
+    <label for="inputEscola" class="form-label"><b>Escola <b style="color:red;">*</b></b></label>
+    <select id="inputEscola" class="form-select" name="escola" required>
+    <option selected value="">Selecione uma escola</option>
+    <option value="escola1">Escola 1</option>
+    <option value="escola2">Escola 2</option>
+    <option value="escola3">Escola 3</option>
+    </select>
+</div>
  
 <div class="col-md-6">
-    <label for="inputCity" class="form-label"><b>Cidade</b></label>
-    <input type="text" class="form-control" id="inputCity" placeholder="Digite sua Cidade">
+  <label for="inputCidade" class="form-label"><b>Cidade <b style="color:red;">*</b></b></label>
+  <select id="inputCidade" class="form-select" name="cidade" required>
+  <option selected value="">Selecione uma cidade</option>
+  <option value="Belo Horizonte">Belo Horizonte</option>
+  </select>
 </div>
 
 <div class="col-md-6">
-    <label for="inputState" class="form-label"><b>Estado</b></label>
-    <select id="inputState" class="form-select">
-    <option selected>Selecione um estado</option>
-    <option value="AC">Acre</option>
-    <option value="AL">Alagoas</option>
-    <option value="AP">Amapá</option>
-    <option value="AM">Amazonas</option>
-    <option value="BA">Bahia</option>
-    <option value="CE">Ceará</option>
-    <option value="DF">Distrito Federal</option>
-    <option value="ES">Espirito Santo</option>
-    <option value="GO">Goiás</option>
-    <option value="MA">Maranhão</option>
-    <option value="MS">Mato Grosso do Sul</option>
-    <option value="MT">Mato Grosso</option>
-    <option value="MG">Minas Gerais</option>
-    <option value="PA">Pará</option>
-    <option value="PB">Paraíba</option>
-    <option value="PR">Paraná</option>
-    <option value="PE">Pernambuco</option>
-    <option value="PI">Piauí</option>
-    <option value="RJ">Rio de Janeiro</option>
-    <option value="RN">Rio Grande do Norte</option>
-    <option value="RS">Rio Grande do Sul</option>
-    <option value="RO">Rondônia</option>
-    <option value="RR">Roraima</option>
-    <option value="SC">Santa Catarina</option>
-    <option value="SP">São Paulo</option>
-    <option value="SE">Sergipe</option>
-    <option value="TO">Tocantins</option>
+    <label for="inputEstado" class="form-label"><b>Estado <b style="color:red;">*</b></b></label>
+    <select id="inputEstado" class="form-select" name="estado" required>
+    <option selected value="">Selecione um estado</option>
+    <option value="Minas Gerais">Minas Gerais</option>
     </select>
 </div>
 
 <div class="col-md-6">
-  <label for="inputCity" class="form-label"><b>Nome Agressor</b></label>
-  <input type="text" class="form-control" id="inputCity" placeholder="Digite o nome do agressor">
+  <label for="inputNomeAgressor" class="form-label"><b>Nome Agressor</b></label>
+  <input type="text" class="form-control" id="inputNomeAgressor" name="nomeagressor" placeholder="Digite o nome do agressor">
 </div>
 
 <div class="col-md-6">
-  <label for="inputCity" class="form-label"><b>E-mail</b></label>
-  <input type="email" class="form-control" id="inputCity" placeholder="Digite o Email">
+  <label for="inputEmail" class="form-label"><b>E-mail <b style="color:red;">*</b></b></label>
+  <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Digite o Email" required>
 </div>
 
 <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label"><b>Relato</b></label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descreva melhor o acontecido"></textarea>
+  <label for="Relato" class="form-label"><b>Relato <b style="color:red;">*</b></b></label>
+  <textarea class="form-control" id="Relato" rows="3" name="relato" maxlength="250" placeholder="Descreva melhor o acontecido" required></textarea>
 </div>
 
-<div class="col-md-8">
-  <label for="inputState" class="form-label"><b>Deseja Marcar um atendimento presencial?</b></label>
-  <select id="inputState" class="form-select">
-  <option selected>Selecione uma opção</option>
-  <option value="Sim">Sim</option>
-  <option value="Não">Não</option>
+<div class="col-md-9">
+  <label for="inputAtendimento" class="form-label"><b>Deseja Marcar um atendimento? <b style="color:red;">*</b></b></label>
+  <select id="inputAtendimento" class="form-select" name="atendimento" required>
+  <option selected value="">Selecione uma opção</option>
+  <option value="presencial">Presencial</option>
+  <option value="online">Online</option>
+  <option value="nao quero">Não quero</option>
+
 </select>
 </div>
 
@@ -113,6 +98,7 @@
 </div>
 
   </main>
+
     <script src="mobile-navbar.js"></script>
   </body>
 </html>
